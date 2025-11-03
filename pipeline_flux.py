@@ -760,7 +760,7 @@ class FluxPipeline(
         width = width or self.default_sample_size * self.vae_scale_factor
         #get unconditional propmt embeddings
         #some inputs for pipeline
-        prompt=[""] * self.cfg.DATA.BATCH_SIZE
+        prompt=[""] * image.shape[0]
         prompt_2=None
         prompt_3=None
         negative_prompt=""
