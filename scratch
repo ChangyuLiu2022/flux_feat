@@ -1,0 +1,20 @@
+cp /home/cldb5/.conda/envs/flux/lib/python3.10/site-packages/diffusers/pipelines/flux/pipeline_flux.py /home/cldb5/flux/pipeline_flux.py
+
+cp /home/cldb5/.conda/envs/flux/lib/python3.10/site-packages/diffusers/models/transformers/transformer_flux.py /home/cldb5/flux/transformer_flux.py
+
+
+
+
+CUDA_VISIBLE_DEVICES=0 /home/cldb5/.conda/envs/flux/bin/python  -- /home/cldb5/flux/example.py --config-file /home/cldb5/prompt_DiT/configs/prompt_dit/cub.yaml DATA.BATCH_SIZE 4 MODEL.PROMPT.NUM_TOKENS 0 MODEL.PROMPT.DROPOUT 0.0 MODEL.PROMPT_HEAD_PATH "" MODEL.MLP_NUM 0 SOLVER.TOTAL_EPOCH 100 MODEL.T_LIST \[850\] MODEL.FEATURES_LAYER_LIST \[0\] MODEL.FEATURES_TYPE_LIST \[\'query\'\] DATA.DATAPATH /storage/data/changyu/CUB_200_2011 DATA.CROPSIZE 512 MODEL.FUSION_PRE_LAYER True MODEL.FUSION_PRE_LAYER_TYPE attn_dim MODEL.FUSION_ARC Use_CLS_Token:True:800,Insert_CLS_Token,Attention:800:8:4:2,Extract_CLS_Token DBG True MODEL.FUSION_TYPE attention SEED 0 
+
+CUDA_VISIBLE_DEVICES=0 /home/cldb5/.conda/envs/flux/bin/python  -- /home/cldb5/flux/example.py --config-file /home/cldb5/prompt_DiT/configs/prompt_dit/cub.yaml DATA.BATCH_SIZE 4 MODEL.PROMPT.NUM_TOKENS 0 MODEL.PROMPT.DROPOUT 0.0 MODEL.PROMPT_HEAD_PATH "" MODEL.MLP_NUM 0 SOLVER.TOTAL_EPOCH 100 MODEL.T_LIST \[850\] MODEL.FEATURES_LAYER_LIST \[3\] MODEL.FEATURES_TYPE_LIST \[\'query\'\] DATA.DATAPATH /storage/data/changyu/CUB_200_2011 DATA.CROPSIZE 512 MODEL.FUSION_PRE_LAYER True MODEL.FUSION_PRE_LAYER_TYPE attn_dim MODEL.FUSION_ARC Use_CLS_Token:True:800,Insert_CLS_Token,Attention:800:8:4:2,Extract_CLS_Token DBG True MODEL.FUSION_TYPE attention SEED 0 
+
+
+CUDA_VISIBLE_DEVICES=0 /home/cldb5/.conda/envs/flux/bin/python  -- /home/cldb5/flux/example.py --config-file /home/cldb5/prompt_DiT/configs/prompt_dit/cub.yaml DATA.BATCH_SIZE 4 MODEL.PROMPT.NUM_TOKENS 0 MODEL.PROMPT.DROPOUT 0.0 MODEL.PROMPT_HEAD_PATH "" MODEL.MLP_NUM 0 SOLVER.TOTAL_EPOCH 100 MODEL.T_LIST \[850\] MODEL.FEATURES_LAYER_LIST \[8\] MODEL.FEATURES_TYPE_LIST \[\'query\'\] DATA.DATAPATH /storage/data/changyu/CUB_200_2011 DATA.CROPSIZE 512 MODEL.FUSION_PRE_LAYER True MODEL.FUSION_PRE_LAYER_TYPE attn_dim MODEL.FUSION_ARC Use_CLS_Token:True:800,Insert_CLS_Token,Attention:800:8:4:2,Extract_CLS_Token DBG True MODEL.FUSION_TYPE attention SEED 0 
+
+
+CUDA_VISIBLE_DEVICES=0 /home/cldb5/.conda/envs/flux/bin/python  -- /home/cldb5/flux/example.py --config-file /home/cldb5/prompt_DiT/configs/prompt_dit/cub.yaml DATA.BATCH_SIZE 4 MODEL.PROMPT.NUM_TOKENS 0 MODEL.PROMPT.DROPOUT 0.0 MODEL.PROMPT_HEAD_PATH "" MODEL.MLP_NUM 0 SOLVER.TOTAL_EPOCH 100 MODEL.T_LIST \[850\] MODEL.FEATURES_LAYER_LIST \[13\] MODEL.FEATURES_TYPE_LIST \[\'query\'\] DATA.DATAPATH /storage/data/changyu/CUB_200_2011 DATA.CROPSIZE 512 MODEL.FUSION_PRE_LAYER True MODEL.FUSION_PRE_LAYER_TYPE attn_dim MODEL.FUSION_ARC Use_CLS_Token:True:800,Insert_CLS_Token,Attention:800:8:4:2,Extract_CLS_Token DBG True MODEL.FUSION_TYPE attention SEED 0 
+
+
+CUDA_VISIBLE_DEVICES=0 /home/cldb5/.conda/envs/flux/bin/python  -- /home/cldb5/flux/example.py --config-file /home/cldb5/prompt_DiT/configs/prompt_dit/cub.yaml DATA.BATCH_SIZE 4 MODEL.PROMPT.NUM_TOKENS 0 MODEL.PROMPT.DROPOUT 0.0 MODEL.PROMPT_HEAD_PATH "" MODEL.MLP_NUM 0 SOLVER.TOTAL_EPOCH 100 MODEL.T_LIST \[850\] MODEL.FEATURES_LAYER_LIST \[18\] MODEL.FEATURES_TYPE_LIST \[\'query\'\] DATA.DATAPATH /storage/data/changyu/CUB_200_2011 DATA.CROPSIZE 512 MODEL.FUSION_PRE_LAYER True MODEL.FUSION_PRE_LAYER_TYPE attn_dim MODEL.FUSION_ARC Use_CLS_Token:True:800,Insert_CLS_Token,Attention:800:8:4:2,Extract_CLS_Token DBG True MODEL.FUSION_TYPE attention SEED 0 
+

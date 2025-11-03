@@ -1,0 +1,11 @@
+conda create -n flux python=3.10
+conda activate flux
+pip install -e ".[all]"
+pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+
+
+pip install -U diffusers[torch] transformers accelerate safetensors
+
+
+pip install iopath==0.1.10
+pip install fvcore==0.1.5.post20221221

@@ -1,0 +1,57 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": "false",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "MASTER_ADDR": "localhost",
+                "MASTER_PORT": "12355",
+                "RANK": "0",
+                "WORLD_SIZE": "1",
+                "LOCAL_RANK": "0" // This is often needed for PyTorch Lightning or if your script uses it.
+            },
+         /* */
+         "args":[
+            "--config-file", 
+            "/home/cldb5/prompt_DiT/configs/prompt_dit/cub.yaml", 
+            //"/home/cldb5/prompt_DiT/configs/prompt_dit/flower.yaml",
+            //"/home/cldb5/prompt_DiT/configs/prompt_dit/aircraft.yaml",
+            //"/home/cldb5/prompt_DiT/configs/prompt_dit/dogs.yaml",
+            //"/home/cldb5/prompt_DiT/configs/prompt_dit/nabirds.yaml",
+            "DATA.BATCH_SIZE","8", 
+            "MODEL.PROMPT.NUM_TOKENS","0", 
+            "MODEL.PROMPT.DROPOUT","0.0", 
+            //"OUTPUT_DIR", "/data-drive/backup/changyu/expe/prompt_dit",
+            "MODEL.PROMPT_HEAD_PATH","",
+            "MODEL.MLP_NUM","0",
+            "SOLVER.TOTAL_EPOCH", "28",
+            //"MODEL.PROMPT.TYPE", "deep",
+            "MODEL.T_LIST", "[850]",
+            "MODEL.FEATURES_LAYER_LIST", "[2]",
+            "MODEL.FEATURES_TYPE_LIST", "['query']",//"['value']",
+            "DATA.DATAPATH", "/storage/data/changyu/CUB_200_2011", //"/storage/data/changyu/CUB_200_2011",//"/storage/data/changyu/nabirds",//"/storage/data/changyu/StanfordDogs",// "/storage/data/changyu/fgvc-aircraft-2013b", //"/storage/data/changyu/OxfordFlowers", 
+            "DATA.CROPSIZE", "512",
+            "MODEL.FUSION_PRE_LAYER", "True",
+            "MODEL.FUSION_PRE_LAYER_TYPE", "attn_dim",
+            //"MODEL.FUSION_LINEAR_OUT_DIM", "512",
+            "MODEL.FUSION_ARC", "Use_CLS_Token:True:800,Insert_CLS_Token,Attention:800:8:4:2,Extract_CLS_Token",
+            "DBG", "True",
+            "MODEL.FUSION_TYPE", "attention",
+            "SEED", "0",
+            "SOLVER.ACC_THRESHOLD", "0.2"
+            //"SOLVER.BASE_LR", "0.001"
+         ]
+          
+        }
+    ]
+}
